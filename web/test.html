@@ -1,0 +1,124 @@
+<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .bill-container {
+            width: 80%;
+            margin: auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        .bill-container .logo {
+            width: 150px;
+            height: 150px;
+        }
+        .bill-header {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .bill-header h1 {
+            margin: 0;
+        }
+        .bill-details, .bill-items, .bill-total {
+            margin-bottom: 20px;
+        }
+        .bill-items table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .bill-items th, .bill-items td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .bill-items th {
+            background-color: #f4f4f4;
+        }
+        .bill-total {
+            text-align: right;
+        }
+        .print-btn {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .print-btn button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bill-container">
+    <div class="bill-header">
+        <img src="mylogo.png" alt="logo" class="logo">
+        <h1>Customer Invoice</h1>
+        <p>Date: <%= new java.util.Date() %></p>
+    </div>
+
+    <!-- Customer Details -->
+    <div class="bill-details">
+        <p><strong>Customer Name:</strong> John Doe</p>
+        <p><strong>Contact:</strong> 123-456-7890</p>
+        <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+    </div>
+
+    <!-- Items Table -->
+    <div class="bill-items">
+        <h2>Items Purchased</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price per Unit</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Item 1</td>
+                <td>2</td>
+                <td>$10.00</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+                <td>1</td>
+                <td>$15.00</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>Item 3</td>
+                <td>3</td>
+                <td>$7.50</td>
+                <td>$22.50</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Total Amount -->
+    <div class="bill-total">
+        <p><strong>Total Amount: $57.50</strong></p>
+    </div>
+
+    <!-- Print Button -->
+    <div class="print-btn">
+        <button onclick="window.print()">Print Bill</button>
+    </div>
+</div>
+
+</body>
+</html>
