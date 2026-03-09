@@ -1,4 +1,4 @@
-# Java Web Application (JSP, Servlet, JDBC, MySQL)
+# VMart (JSP, Servlet, JDBC, MySQL)
 
 A dynamic **Java Web Application** built using **JSP, Servlets, JDBC, and MySQL**.  
 This project demonstrates how to develop a full web application with server-side logic, database connectivity, and dynamic web pages using Java web technologies.
